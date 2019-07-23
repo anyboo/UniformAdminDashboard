@@ -10,6 +10,7 @@ var scanRouter = require('./routes/scan');
 var heartbeatRouter = require('./routes/heartbeat');
 var updateRouter = require('./routes/update');
 var updatesizeRouter = require('./routes/updatesize')
+var qrcodeRoute = require('./routes/qrcode');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/scan', scanRouter);
 app.use('/heartbeat', heartbeatRouter);
 app.use('/update', updateRouter);
 app.use('/updatesize', updatesizeRouter);
+app.use('/qrcode', qrcodeRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
